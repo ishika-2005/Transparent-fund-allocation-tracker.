@@ -23,7 +23,9 @@ To create a decentralized, tamper-proof system that ensures funds are allocated 
 - **Fraud Detection:** Detects suspicious transactions using blockchain analysis.
 - **Smart Contract Automation:** Automates fund allocation based on predefined rules.
 ## Contract Adress -
+```sh
 0xDd51D89787EC5FCD29fcDabB8e4B1259A08C104c
+```
 ## proof image
 ![image](https://github.com/user-attachments/assets/bd64f215-94fa-4314-aa96-6831d5377b3e)
 
