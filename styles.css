@@ -1,0 +1,181 @@
+:root {
+    --primary-color: #1e3a5f;
+    --secondary-color: #3498db;
+    --background-color-light: #f5f7fa;
+    --background-color-dark: #2c3e50;
+    --text-color-light: #2c3e50;
+    --text-color-dark: #ecf0f1;
+    --card-background-light: #ffffff;
+    --card-background-dark: #34495e;
+    --accent-color: #e67e22;
+}
+
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: var(--background-color-light);
+    color: var(--text-color-light);
+    transition: all 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Dark Mode */
+body.dark-mode {
+    background: var(--background-color-dark);
+    color: var(--text-color-dark);
+}
+
+.dark-mode .auth-container,
+.dark-mode .auth-form {
+    background: var(--card-background-dark);
+    color: var(--text-color-dark);
+    box-shadow: none;
+}
+
+.dark-mode input {
+    background: #2c3e50;
+    color: #ecf0f1;
+    border: 1px solid #ecf0f1;
+}
+
+.dark-mode button {
+    background: var(--accent-color);
+    color: white;
+}
+
+/* Welcome Screen Animation */
+#welcome-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: var(--primary-color);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    font-weight: bold;
+    z-index: 999;
+    animation: fadeOut 2.5s ease-in-out forwards;
+}
+
+@keyframes fadeOut {
+    0% { opacity: 1; }
+    100% { opacity: 0; visibility: hidden; }
+}
+
+/* Theme Toggle Button */
+.theme-toggle {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 10px 15px;
+    background: var(--secondary-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+}
+
+.theme-toggle:hover {
+    background: var(--primary-color);
+}
+
+/* Authentication Container */
+.auth-container {
+    background: var(--card-background-light);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 400px;
+}
+
+.auth-forms {
+    width: 100%;
+}
+
+/* Authentication Forms */
+.auth-form {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.auth-form.active {
+    display: flex;
+}
+
+/* Form Elements */
+.form-group {
+    width: 100%;
+    text-align: left;
+}
+
+.form-group label {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+button {
+    background: var(--secondary-color);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background: var(--primary-color);
+}
+
+/* Switch Between Login & Signup */
+.switch-form {
+    font-size: 14px;
+}
+
+.switch-form a {
+    color: var(--accent-color);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.switch-form a:hover {
+    text-decoration: underline;
+}
+
+/* Notification Styling */
+.notification {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--accent-color);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    display: none;
+    font-size: 14px;
+}

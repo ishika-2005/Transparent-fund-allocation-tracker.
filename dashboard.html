@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fund Allocation Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.ethers.io/lib/ethers-5.2.umd.min.js" type="application/javascript"></script>
+</head>
+<body>
+    <!-- Welcome Screen -->
+    <div id="welcome-screen">
+        <h1>Welcome to Fund Allocation Tracker</h1>
+    </div>
+
+    <!-- Theme Toggle Button -->
+    <button id="theme-toggle" class="theme-toggle">🌙 Toggle Theme</button>
+
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <h1>Fund Allocation Tracker</h1>
+            <div class="wallet-status">
+                <span id="walletAddress">Not Connected</span>
+                <button id="connectWallet">Connect Wallet</button>
+            </div>
+        </header>
+
+  
+        <main>
+            <!-- Current Project Details -->
+            <section class="project-details">
+                <h2>Current Project Details</h2>
+                <div class="detail-card">
+                    <p><strong>Title:</strong> <span id="currentTitle">Loading...</span></p>
+                    <p><strong>Description:</strong> <span id="currentDescription">Loading...</span></p>
+                </div>
+            </section>
+
+            <!-- Update Project Form -->
+            <section class="update-project">
+                <h2>Update Project Details</h2>
+                <form id="updateForm">
+                    <div class="form-group">
+                        <label for="newTitle">New Title:</label>
+                        <input type="text" id="newTitle" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="newDescription">New Description:</label>
+                        <textarea id="newDescription" required></textarea>
+                    </div>
+                    <button type="submit">Update Project</button>
+                </form>
+            </section>
+        </main>
+
+        <!-- Notification -->
+        <div id="notification" class="notification"></div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
